@@ -57,7 +57,7 @@ def Comment_View(request):
 
 class Search(generic.ListView):
     template_name = 'watches/shop.html'
-    context_object_name = 'watch'
+    context_object_name = ('watches')
     paginate_by = 5
 
     def get_queryset(self):
