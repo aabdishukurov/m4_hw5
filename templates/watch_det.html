@@ -1,0 +1,37 @@
+{% include 'watches/header.html' %}
+<center>
+<div class="card" style="width: 18rem;">
+    <img src="{{object.image.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+       <h1>{{object.title}}</h1>
+    <h2>{{object.model}}</h2>
+    <p class="card-text">{{object.director}}</p>
+      <p class="card-text">{{object.description}}</p>
+      <p class="card-text">{{object.cost}}</p>
+  </div>
+</div>
+    <iframe src="{{object.review}}" frameborder="0" width="640" height="420"></iframe>
+    <br>
+    <button type="button" class="btn btn-danger"><a style="text-decoration: none href="/watch_detail/{{object.id}}/delete/">Удалить</a></button>
+
+        <button type="button" class="btn btn-warning"><a style="text-decoration: none" href="/watch_detail/{{object.id}}/update/">Изменить</a></button>
+    <br><br>
+<div>
+    <h1>Лента отзывов</h1>
+
+    {% for i in comment_key %}
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+          <h1>{{i.title}}</h1>
+          <h3>{{i.review_created_at}}</h3>
+          <p class="card-text">{{i.review_text}}</p>
+          <h3 class="card-text">{{i.review_start}}</h3>
+  </div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>
+
+</center>
+{% include 'watches/footer.html' %}
