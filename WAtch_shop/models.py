@@ -4,10 +4,10 @@ from django.urls import reverse
 
 class Shop(models.Model):
     MODEL = (
-        ('B650WB-1B', 'B650WB-1B'),
-        ('MTP-VD03B-1A', 'MTP-VD03B-1A'),
-        ('MTP-1308D-1A', 'MTP-1308D-1A'),
-        ('MTP-VD01G-1B', 'MTP-VD01G-1B')
+        ('Rolex', 'Rolex'),
+        ('А. Lange & Sohne', 'А. Lange & Sohne'),
+        ('Grand Seiko', 'Grand Seiko'),
+        ('Konstantin Chaykin', 'Konstantin Chaykin')
     )
     title = models.CharField('Укажите название часов:', max_length=100)
     description = models.TextField('Описание часов:', blank=True, null=True)
