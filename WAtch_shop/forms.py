@@ -2,6 +2,13 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from . import models
 
+
+
+class WatchShopForm(forms.ModelForm):
+    class Meta:
+        model = models.Shop
+        fields = '__all__'
+
 ADMIN = 1
 VIPClient = 2
 CLIENT = 3
